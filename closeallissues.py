@@ -39,7 +39,8 @@ all_issues = api.get_issues(org, repo, user, token)
 
 
 for issue in all_issues:
-    print(issue["number"])
+    print("Closing " + str(issue["number"]))
+    api.close_issue(org, repo, user, token,issue["number"])
 
 
     
